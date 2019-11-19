@@ -25,11 +25,10 @@ jobs:
 
     - stage: release
       node_js: lts/*
-      script: skip
+      script: npm run build
       deploy:
         provider: script
         skip_cleanup: true
-        before_script: npm run build
         script: npm run semantic-release
 
 stages:
