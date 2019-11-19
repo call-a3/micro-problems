@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "scripts": {
-    "build": "babel src/index.js --out-file lib/index.js",
+    "build": "babel src --out-dir lib --ignore 'src/**/*.spec.js'",
     "check-coverage": "jest --coverage",
     "commit": "git-cz",
     "lint": "standard",
