@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`micro-problems decorator should catch the Problem thrown from the wrapped handler: body 1`] = `
+Array [
+  "{\\"title\\":\\"Something went wrong\\",\\"status\\":500,\\"detail\\":\\"This instance could not be helped\\",\\"meta\\":\\"void\\"}",
+]
+`;
+
+exports[`micro-problems decorator should catch the Problem thrown from the wrapped handler: setHeader calls 1`] = `
+Array [
+  Array [
+    "Content-Type",
+    "application/json+problem",
+  ],
+  Array [
+    "Content-Length",
+    104,
+  ],
+]
+`;
+
+exports[`micro-problems decorator should throw other Error thrown from the wrapped handler 1`] = `"generic error"`;
+
+exports[`micro-problems should return an HTTP handler: body 1`] = `
+Array [
+  "{\\"title\\":\\"Something went wrong\\",\\"status\\":500,\\"detail\\":\\"There is nothing you can do\\"}",
+]
+`;
+
+exports[`micro-problems should return an HTTP handler: setHeader calls 1`] = `
+Array [
+  Array [
+    "Content-Length",
+    84,
+  ],
+]
+`;
