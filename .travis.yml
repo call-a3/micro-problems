@@ -29,6 +29,7 @@ jobs:
       deploy:
         provider: script
         skip_cleanup: true
+        before_script: npm run build
         script: npm run semantic-release
 
 stages:
