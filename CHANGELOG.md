@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/call-a3/micro-problems/compare/1.1.0...1.1.1) (2019-11-19)
+
+
+### Bug Fixes
+
+* make sure package is built before publishing ([08bb74c](https://github.com/call-a3/micro-problems/commit/08bb74cba7e465c72a537be648fae97bb8f86174))
+
 # [1.1.0](https://github.com/call-a3/micro-problems/compare/1.0.0...1.1.0) (2019-11-19)
 
 
