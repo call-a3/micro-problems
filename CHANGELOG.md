@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/call-a3/micro-problems/compare/1.1.1...1.1.2) (2019-11-19)
+
+
+### Bug Fixes
+
+* tweak ci pipeline to build before releasing ([726f9bd](https://github.com/call-a3/micro-problems/commit/726f9bdff0007bab4037e8ade87623db12e5020e))
+
 ## [1.1.1](https://github.com/call-a3/micro-problems/compare/1.1.0...1.1.1) (2019-11-19)
 
 
