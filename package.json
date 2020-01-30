@@ -37,7 +37,7 @@
     "micro": "9.x"
   },
   "devDependencies": {
-    "@babel/cli": "^7.7.0",
+    "@babel/cli": "^7.8.4",
     "@babel/preset-env": "^7.7.1",
     "@call-a3/standard": "^1.0.2",
     "@commitlint/cli": "^8.2.0",
