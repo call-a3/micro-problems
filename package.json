@@ -50,7 +50,7 @@
     "commitlint": "^8.2.0",
     "cz-conventional-changelog": "^3.0.2",
     "husky": "^4.0.2",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.3",
     "micro": "^9.3.4",
     "semantic-release": "^17.0.0"
