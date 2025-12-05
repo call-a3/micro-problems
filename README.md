@@ -31,7 +31,7 @@ const { handler, Problem, decorator } = declareProblem({
   status: 403,
   title: "You do not have enough credit.",
   detail:
-    "Your current balance is lower than the cost of what you are trying to purchase."
+    "Your current balance is lower than the cost of what you are trying to purchase.",
 });
 
 export { handler, Problem, decorator };
@@ -41,7 +41,7 @@ In the rest of this example, I leave it up to the reader to pick their preferred
 Assume in this example that any file in the `api` folder would be routed as the corresponding route (minus the file extension).
 
 ```js
-// api/probs/out-of-credit.js
+// api/problems/out-of-credit.js
 
 import { handler } from "../../out-of-credit";
 
@@ -54,20 +54,20 @@ export default handler;
 
 import {
   Problem as OutOfCreditProblem,
-  decorator as withOutOfCreditProblem
+  decorator as withOutOfCreditProblem,
 } from "../out-of-credit";
 
 // A handler which could encounter the problem, should use a combination of the Problem and decorator
-export default withOutOfCreditProblem(async (req, res) => {
+export default withOutOfCreditProblem(async function purchases(req, res) {
   const purchase = await json(req);
   const account = await determineAccount(req);
   if (account.credit < purchase.cost) {
-    const notification = await account.addFailedPurchaseNotification(purchase)
+    const notification = await account.addFailedPurchaseNotification(purchase);
     throw new OutOfCreditProblem(
-      `Your current balance is ${account.credit}, but that costs ${purchase.cose}.`,
+      `Your current balance is ${account.credit}, but that costs ${purchase.cost}.`,
       {
         balance: account.credit,
-        accounts: [account.uri, purchase.seller.uri]
+        accounts: [account.uri, purchase.seller.uri],
       },
       notification.uri
     );
